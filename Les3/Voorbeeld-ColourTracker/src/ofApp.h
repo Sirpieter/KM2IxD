@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "ofxOpenCv.h"
 
+#define HUE_MARGIN 5
+
 #define GRABBER_WIDTH 640
 #define GRABBER_HEIGHT 480
 
@@ -19,10 +21,21 @@ class ofApp : public ofBaseApp {
         ofVideoGrabber grabber;
 
         ofxCvColorImage rgbImage;
-
         ofxCvColorImage hsvImage;
 
-        ofxCvGrayscaleImage hueImage;
-        ofxCvGrayscaleImage satImage;
-        ofxCvGrayscaleImage valImage;
+        ofxCvGrayscaleImage hue;
+        ofxCvGrayscaleImage saturation;
+        ofxCvGrayscaleImage value;
+
+        ofxCvGrayscaleImage filtered;
+
+        ofxCvContourFinder contours;
+
+        int selectedHue;
+
+        bool showHSVComponents = true;
+        bool showFilter = true;
+        bool showContours = true;
+        bool showVideo = true;
+
 };

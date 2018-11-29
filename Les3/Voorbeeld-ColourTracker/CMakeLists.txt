@@ -22,11 +22,11 @@ include(linux64)
 # ===================== Project Source Files =====================
 
 set(SOURCE_FILES
-		${ADDON_SOURCE_FILES}
-		src/main.cpp
-		src/ofApp.cpp
+        ${ADDON_SOURCE_FILES}
+        src/main.cpp
+        src/ofApp.cpp
 
-		)
+        )
 
 # ============ Compile and Link ==================
 
